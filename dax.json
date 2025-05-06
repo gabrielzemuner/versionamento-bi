@@ -1,0 +1,62 @@
+[
+    {
+        "NomeMedida": "Ultima Atualização",
+        "DAX": "\"Painel atualizado semanalmente | Ultima Atualização: \" & SELECTEDVALUE('DIM_ATUALIZAÇÃO'[Data Hora Certa])"
+    },
+    {
+        "NomeMedida": "Troca de Tema Títulos",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#002036\",    \"#DEE2E5\")"
+    },
+    {
+        "NomeMedida": "Troca de Tema Tela de Fundo",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#E6EDF2\",    \"#001524\")"
+    },
+    {
+        "NomeMedida": "Troca de Tema Sub Cards",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#F3F6F9\",    \"#001524\")"
+    },
+    {
+        "NomeMedida": "Troca de Tema Cards",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#FFFFFF\",    \"#002036\")"
+    },
+    {
+        "NomeMedida": "Troca de Tema Borda dos Cards",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#B0C8D7\",    \"#003659\")"
+    },
+    {
+        "NomeMedida": "Troca de Tema Sub Menu",
+        "DAX": "IF(    SUM(DIM_TROCA_TEMA[CD_ID]) = 0,    \"#B0C8D7\",    \"#003659\")"
+    },
+    {
+        "NomeMedida": "Total de OKRs",
+        "DAX": "CALCULATE(    COUNT(DIM_OKR_TIP_PRSP[CD_TIP_PRSP]))"
+    },
+    {
+        "NomeMedida": "Total de KRs",
+        "DAX": "COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD])"
+    },
+    {
+        "NomeMedida": "Total Soluções KRs",
+        "DAX": "\"Soluções\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),    DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 7) & \" KRs)\""
+    },
+    {
+        "NomeMedida": "Total Dados KRs",
+        "DAX": "\"Dados\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),    DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 8) & \" KRs)\""
+    },
+    {
+        "NomeMedida": "Total Tecnologia KRs",
+        "DAX": "\"Tecnologia\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),    DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 9) & \" KRs)\""
+    },
+    {
+        "NomeMedida": "Total Pessoas KRs",
+        "DAX": "\"Pessoas\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),    DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 10) & \" KRs)\""
+    },
+    {
+        "NomeMedida": "Total Ecossistema KRs",
+        "DAX": "\"Ecossistema\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),   DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 11) & \" KRs)\""
+    },
+    {
+        "NomeMedida": "Total Modelo Operacional KRs",
+        "DAX": "\"Modelo Operacional\" & \" (\"&CALCULATE(    COUNT(FATO_OKR_KEY_RSTD[CD_KEY_RSTD]),    DIM_OKR_TIP_PRSP[CD_TIP_PRSP] = 12) & \" KRs)\""
+    }
+]
