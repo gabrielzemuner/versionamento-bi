@@ -1,7 +1,7 @@
 [
     {
         "NomeMedida": "Ultima Atualização",
-        "DAX": "\"Painel atualizado semanalmente | Ultima Atualização: \" & SELECTEDVALUE('DIM_ATUALIZAÇÃO'[Data Hora Certa])"
+        "DAX": "\"Painel atualizado semanalmente | Ultima Atualização: \" & SELECTEDVALUE('DIM_ATUALIZAÇÃO'[Data Hora Certa])// COMENTÁRIO TESTE"
     },
     {
         "NomeMedida": "Troca de Tema Títulos",
